@@ -21,6 +21,9 @@ public class Lab2_DiegoVarela {
         Scanner entrada = new Scanner(System.in);
         ArrayList<Personaje> lista = new ArrayList();
         lista.add(new Personaje("Barbaro","Claus","Enano","90cm","El no reparte regalos","Brinstar","60lbs","40"));
+         lista.add(new Personaje("Mago","Anakin","Humano","2mts","El elegido","Crateria","80lbs","17"));
+          lista.add(new Personaje("Clerigo","Ragnar","Mediano","3.5mts","el sabio","Maridia","60lbs","100"));
+           lista.add(new Personaje("Picaro","Clept","Elfo","45cm","El te robo la novia","Brinstar","79lbs","5"));
         char resp = 's';
         while (resp == 's' || resp == 'S') {
             System.out.println("Menu");

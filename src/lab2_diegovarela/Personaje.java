@@ -39,7 +39,7 @@ public class Personaje {
         }
         estatura = e;
         descripcion = d;
-        if (nac == "Norfair" || nac == "Brinstar" || nac == "Maridia" || nac == "Zebes" || nac == "Criteria") {
+        if (nac == "Norfair" || nac == "Brinstar" || nac == "Maridia" || nac == "Zebes" || nac == "Crateria") {
             nacionalidad = nac;
         }
         peso=p;
