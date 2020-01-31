@@ -188,6 +188,12 @@ public class Personaje {
             ac = 50;
         }
     }
+    public void sethpat(int at){
+    this.hp=hp-at;
+    }
+    public void setacdef(int def){
+    this.ac=ac+def;
+    }
     @Override
      public String toString() {
         return nombre;
