@@ -151,11 +151,12 @@ public class Lab2_DiegoVarela {
                     for (int i = 0; i < lista.size(); i++) {
                         System.out.println(lista.get(i));
                     }
-                    System.out.println("Elija el jugador que elije");
+                    System.out.println("Elija el jugador que quiere");
                     int al = entrada.nextInt();
                     System.out.println("Contra quien deseas enfrentarte:");
                     int en = entrada.nextInt();
-                    while (((Personaje) lista.get(al)).getHp() == 0 || ((Personaje) lista.get(en)).getHp() == 0) {
+                    System.out.println(((Personaje) lista.get(en)).getHp());
+                    while (((Personaje) lista.get(al)).getHp() != 0 || ((Personaje) lista.get(en)).getHp() != 0) {
                         System.out.println("Empiezas tu jugador 1");
                         System.out.println("1) Atacas o 2) Defiendes");
                         int comb = entrada.nextInt();
@@ -170,16 +171,34 @@ public class Lab2_DiegoVarela {
                             }else if(d>((Personaje)lista.get(en)).getCs()){
                             int at2=((Personaje)lista.get(al)).getDg()*2;
                             ((Personaje)lista.get(en)).sethpat(at2);
-                            }else if(d<((Personaje)lista.get(en)).getCs()){
+                            }else if(d<((Personaje)lista.get(en)).getAc()){
+                                System.out.println("No acertaste");
+                            }
+                                break;
+                            case 2:
+                                ((Personaje)lista.get(al)).setacdef(15);
+                                break;
+                        }
+                        int enemigo=1+random.nextInt(2);
+                          switch(enemigo){
+                            case 1:
+                                System.out.println("Acertaste el golpe");
+                                int d;
+                            d=1+random.nextInt(100);
+                            if(d>((Personaje)lista.get(al)).getAc()){
+                            int at=((Personaje)lista.get(en)).getDg();
+                            ((Personaje)lista.get(al)).sethpat(at);
+                            }else if(d>((Personaje)lista.get(al)).getCs()){
+                            int at2=((Personaje)lista.get(en)).getDg()*2;
+                            ((Personaje)lista.get(al)).sethpat(at2);
+                            }else if(d<((Personaje)lista.get(al)).getAc()){
                                 System.out.println("No acertaste");
                             }
                                 break;
                             case 2:
                                 ((Personaje)lista.get(en)).setacdef(15);
                                 break;
-                        }
-                        
-                            
+                        }  
                         
                     }
                     break;
